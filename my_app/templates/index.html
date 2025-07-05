@@ -1,12 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    {% load static %}
+    <!-- CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title> Django Project </title>
 </head>
+
 <body>
-    
+
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Título da receita -->
+        <h1> Receita de Bolo de Fubá </h1>
+
+        <nav>
+            <ul>
+                <li> <a href="#"> Home </a> </li>
+                <li> <a href="#"> Ingredientes </a> </li>
+                <li> <a href="#"> Untensílios </a> </li>
+                <li> <a href="#"> Contatos </a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner principal -->
+    <div class="banner">
+
+        <div class="headline">
+            <h1>
+                Aprenda a fazer um bolo de fubá!
+            </h1>
+            <p>
+                A receita de bolo de fubá é uma das mais tradicionais do nosso país! <br> Ela é simples, gostosa e
+                perfeita
+                para aquelas tardes aconchegantes e <br> momentos regados com um café quentinho.
+            </p>
+        </div>
+
+        <div class="image-placeholder">
+            <!-- Imagem do bolo -->
+            <img
+                src="https://static.itdg.com.br/images/640-400/70e505e1de5a00a73b4aca0a3bf9a6f7/60720-242448-original.jpg">
+        </div>
+
+        <!-- Descrição geral do Bolo de fubá -->
+
+    </div>
+
+    <!-- Tabela de ingredientes -->
+    <section class="tabela_ingredientes"> <!-- Div para espaçamento interno --->
+        <h1> Tabela de Ingredientes </h1>
+        <table border="1" class="tabela">
+            <tr>
+                <th>
+                    Proteínas
+                    <img src="https://static.itdg.com.br/images/80-80/94a20d33e2970191e1d4d1a48157f47b/ovo.jpg"
+                        width="50">
+                </th>
+                <th>
+                    Carboidratos
+                    <img src="https://static.itdg.com.br/images/80-80/1946f8f06c8a24ac1566cd9565c5811f/acucar.jpg"
+                        width="50">
+                    <img src="https://static.itdg.com.br/images/80-80/2ecb00d8ae61731741d672b4967ecc35/fuba.jpg"
+                        width="50">
+                </th>
+                <th>
+                    Gorduras
+                    <img src="https://static.itdg.com.br/images/80-80/f4db02d8d665346062bc2fa7076f2d6b/oleo.jpg"
+                        width="50">
+                </th>
+                <th>
+                    Líquidos
+                    <img src="https://static.itdg.com.br/images/80-80/2c484ffc860bbf21df138a04dd5f2c28/leite.jpg"
+                        width="50">
+                </th>
+                <th>
+                    Fermentos
+                    <img src="https://static.itdg.com.br/images/80-80/2495316fe15069259d1adf3f985c374b/fermento-em-po.jpg"
+                        width="50">
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Ovos (3 unidades)
+                </td> <!-- Proteínas -->
+                <td>
+                    Açúcar (2 xícaras de chá)
+                </td> <!-- Carboidratos -->
+                <td>Óleo (1/2 copo de óleo)</td> <!-- Gorduras -->
+                <td>Leite (1 copo)</td> <!-- Líquidos -->
+                <td>Fermento em pó químico (1 colher de sopa)</td> <!-- Fermentos -->
+            </tr>
+            <tr>
+                <td></td> <!-- Sem mais ingredientes de Proteínas -->
+                <td>Fubá (2 xícaras de chá)</td> <!-- Carboidratos -->
+                <td>Farinha de trigo (3 colheres de sopa rasas)</td> <!-- Gorduras -->
+                <td></td> <!-- Sem mais ingredientes de Líquidos -->
+                <td></td> <!-- Sem mais ingredientes de Fermentos -->
+            </tr>
+        </table>
+    </section>
+
+    <section class="untensilios">
+
+        <h1> Untensílios </h1>
+
+        <div class="row-card">
+            <div class="card">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Formo de bolo">
+                <h2> Forma de Bolo </h2>
+                <p>
+                    Precisamos de um formo de bolo como untensílio essencial.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhAWFRUVFxUVFhgQGRgYEhUXFRUXFxUVFxUYHSghGBolGxcWIzEjJykrLi4uFx8zOD8sNyktLisBCgoKDg0OGhAQGisgICAtKy0tLS0tLS0tLS0tKzArLS0tLS0tLS0tLS0tLS0tLS0tLS03LS0tLS0tLSstKy0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAgQBAwUGB//EAEcQAAEDAgMDBwgHBgQHAQAAAAEAAhEDIQQSMQVBUSIyYXGRocEGEzNyc4Gx0SNCUmKisrMUJFOSwuEVQ8PSRGOCk6Pi8Af/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/EACMRAQEAAQQCAQUBAAAAAAAAAAABEQIhMUESgcEDIlFx4TL/2gAMAwEAAhEDEQA/APuKIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIqO09psoi93HRo1PyCC8tdWu1vOcB1kBcE4mtVuXebbwZzveVKlhG6kSeLrlEdN21KX2p9UEqH+KDdTefctLWxoI6lJFTO0XbqR95CidoP8A4Q/mUIWCplE/8Qf/AAx2rI2i/wDhdjgtKyEyLA2kd9I+4grP+KN3tcOsLRCFUW2bSpH64HrW+KsseDcEHqXHfTB1APWqr8IBdpLDxYYQekRecp7TrUudFRu/c8BdvBYxtVuZpt06g8CirCIiAiIgIiICIiAiIgIiICIiAvK+UNJzK4qOBLCAAR9W2nj716pcjyoH0BPAjxVgq4R4I5JB00Vpq8zgSdWuIPR48V1aWKqjXK7uPd8ksTLprKpt2gPrMcOq474Uxj2HeR1grKrCiStf7Uz7QQ12fbb2oJLIK1+fb9odqx+0M+0FEy3ysQtBxjB9buPyUXY5u4OPUPmVobytdZ0CekDtIHitD8Y76rP5j4f3VXEVahF3AC1mjgZF0wJ4+qGi5vuG89QVzyWwzwHVHWD4yjqm/evN4y0mb7+J969zs1sUqY+4z8oVu0FpERRRERAREQEREBERAREQEREBcryoaThqkbhN11VR24yaFQH7JVnI8HsbGEnK5sOiRvBAi4PvXfwtYODfvNDvdb5heZ2TSc14yulm8Hd1LtYC3mfZub+n8iun1NM6ZjrNWSFx9oYhzHz50AQDA3AOAvIIEz0aHgt+zcW9ziHXi1o1zOk7p0iw1aVz8LjK5XzSbwHYFA0W8AtZcfPRJjzYMbpzm8dULGDeT5wEzlqOA6oDgOwqYGzzDeA7FIUm8B2LnYzGPY/LmEQIJjU5tRMgANmdFLBYt73QXbibRuy305rsxg/d7L4XGTLoBg4BShV68+cpxxeT0w3f2qOE59b12/o008dsje5Usa/K0ngqeOqAVHA1X2MlrJBAIAAnTQ91lPEtApNABAJYYdryntJnpkla8MYHH2pWfLgCAM0SddG2HTJPavpuHZla1vAAdghfOW0Q+oyRP0tuucq+lJr6iRlERYaEREBERAREQEREBERAREQFXx7ZpvH3XfAqwo1GyCOIKD5TsqvGIcy4AJNtCLxY/EWXewjrU+h729gqf7QuDQpVGViRD2l9wbOYCbkE7ujoXcoc3qrfmqR8HrvrxWIs4nC1XOJBZY8jNIIBEEgtgjhrx6ljB4d9NwApNyw1pLXGGiSTDXEnU/HqUto1Hsh1MPMzOW8Q20Ag6mNBxUMBjnvcWyLZrkTmDS0FwiIac1jfQrEz4r2tP9OOmke54+ajg+fW9oD20aSzU9Oz2VTufS+aYc/S1R7N3azL/Sp16+VMRiGERnc3paDIjpjRYw2KYBlDnP8Arc15ME2PN06Vq2phQ7lkuOVrm5GgEEPBBtY7xMETlCbMwscsl31hDxBk5QbybQxsa77m0MTxyjfX9LT9WofyDxWMLzq0fbGvsaaVfT0/Z1fzUlnCHl1vXb+lTVvHr5VzcVtMhzgMgymHES6LcbReBcWg8FjEOORhcSS4sJmPWgQBayt43KHBxqtYBBjkgkgzqb6cFTx9WSwiecdQQbU37itbbYiNOyr16Q/5p7nu+S+ir5l5PuJxmHaNJqPNuAcRfrIX00LH1JusERFhRERAREQEREBERAREQEREBERB8sxdfzeJeyfrGxtvix92hXWaeTUP2Xtd/KKb1U21hGnFPJ1D8wI11lWg2RWHFpPbSy+C7WzEZjqurtbziR7jl/miFsZiWHR7T1ESquIo+dYBIGjgYmOkXF//AK4kLThdmOa4SWlotF7Nh3JgzMucHSbjKBfVc8acc7rmrNb09P2Vb89FRYf3ip7OkfxVgpVvT0/UqjvpHwUf+IPTSH4Xn/cr16+UVto4x9NzQDM5jOTkjKxzgC64vlPV2JgsW978pfA5XNDb5SBmHJPIMmD0dnUCyEmqY4XG6rU9Oz2VX89JYw7QXVgbgvbP/ZpqR9OPZO73s+Shh3AOrkmAHtmdPRU069fI579lOzOMsAzFwAFgIADcosQYv7+KjjRBYJ5oPc2P6lar7VpjTM71Qdxg3dA1VLGuOYEiOQ8xMxymcPety6u02a/IynOLYSebSJA4SAC49sdq+jheE8hML9O9/Ck1vaRfu7l7tY+pfuWCIiwoiIgIiICIiAiIgIiICIiAiIg8B5QnLi39MHuC3YO73dLGd5eFV8v2uFZpa2bNJ+E2uLgXCns03Yb3pjXWxH+5dcfblnO6z5xzcO17XQWsbY5cpMCZkGO0Ba8JtV7nBvJud4MiTAm45XERaRrKuYOs1rBmcBDntuY5r3N8FbbldBEGLgiDuiQepTPOYK+I9LS4xUH4WnwUKh/eGdNKt3PofMqeL9JR9d47abz4KGK9NSPRVb2hrv6EnX6o0bSw7rebNSSXSA5+W49a0GLW39S17Pw9TMM/nMsHnPdBgjK7WQTfk8O+9UxjAYMg7uS68axAulLaFN0BpJJEiGuuJidNJ3pLfHGFwD059kO95+SjhLPreu39GmpUx9O72VPvfU+ShRnNWiJzt1MD0VPUwUvHqCq/ZTMxcSZJJ5IA1EROsEaid9otFHaT7v6GfEu+SlU2jVc8MkN5WUho5Qv0zqDY236xfTtAek9Rov8A9fzW8WXdK7H/AOfkl+IkQG5Gjp5xPgvZrzHkKB5uqR/Ev1ho+a9OuWv/AEsERFlRERAREQEREBERAREQEREBERB47y0bFWmeLY7z81Twx5dP1XjvZ8l0PLwQKToOpBi53bt65OErAmmQQRLhb1SfBdJwz26VBpLajRE5ngTMS8ZhMXjlKk3ZNQH6rhydXSZAAJu0cmJtvmd1r+Fs+p0lp7abR/SrgKl12VcKmLaA+gAIHnCP/BVWMd6Sj7Rw7aNU+CljudQ9r/o1QobQN6R4VR3sqN8UnXv5GcfgxVAaXQN8a7tDu06e0AhhcCGuz5ySS5xsAC50yegRuWjaL3tLctQ8p0ZYaRFpg5bQJ1mTA321bOqVXloe58ReGwJE3By6WAjXetSavHnZO16j6ep7Ol+assYYw6tP226+yprNH01X1aQ76pWui0F1aQD9I2x09FThZ69RWp2LpNhrS3gBTE8bcmw3964+PPP9Zg7mfNXqWzcsOLhIglrZyyDO88YiALWvqubjn2d7QfhDB4Lppkzsleu8g8Nkwx+9UqO748F6RcPyNdOEpOiM2Y9r3LuLjqu9WCIiiiIiAiIgIiICIiAiIgIiICIiDzHl7Tmiz146pH9l5fZDHANz87zmusgscBJ36wvYeWjZw88HNPxHivLUDyR67O9wHiuum3GGby69Ns1Hgk3bTNiQbOqbx7lzHY2u3XOB99pEATynFzTA0ESecDK6TD9K3pY7uc2PzK+CszVjmGFLEz9CSZPnQbiDdjxBHvTalmtPCrR76gHitmP/AMv2jO8x4rXtUfR9T6R7KrCrpvC9VaapNKpYzFGnfJLZAmSIkxJtxstOF2m57g0UwPWcbGCQDDdcoJWZpuMratYf0tXqpjucfFQwvOre0b+jTWcN6St6zP02/NaDP7wQ5zYfMsEutRp2iL9Qutfz4RuxJsV5rF3HXUqdzn/JWaGGqFwdUBIF/pLwYOgdcfVPXm0sFQ2gSWCJk5nW1vmNu1dJp8e2bX0rYFINw1Fo3U294ldFVdmUstGk37LGN7GgK0vPWxERAREQEREBERAREQEREBERAREQcfysZOFqdEH8QXz3ZOIeczTEMLD02c0z1WX0vbrJw9UfcPddeAww+jfxyO7mmF10asRmx2zz6d9Q9va0O/pWqttB7CQQCASJiJ5LSLgwCS6Lxotjz6M8H/Fj2+KuOpNPOaDGmYAxIg69FlnMnKqtaqXU2OIA+ko6Gf8AMaDNrHtUtq+heeAn+W/gs49obTAaAA19GALAAVWWhR2rehV9m/8AKVZZt+xvr0GuIzCcpzC5EG4m3QT2rFHCMaZawA6TvWnFNcYLHOElkgRGUuGYgRrBKp4HzpcA8vjfBcAbOMg2Ig5RBF5OqTTtyL2F59b12/pU1qpVWtNYucGjzg5xAHoqfFbsNz6vtB+lTWmiyTXHF8dtGmE/idKtfaDHHK0knoEAAamTE6jSVw6zwBSk2Ib3ho8V1q+CFPM/MSYdb6o1Oh369FyqNDDB1aiw8WDscxdJ49I+oAKSwFledsREQEREBERAREQEREBERAREQEREGjHNmm8cWuHcV842foR0EfEL6Y9sgjiIXyfC1XNr5AbEkw6dQTMH3dy6aN2a9EHTTYemke17fmrD8cGmHNINt7d8xvncexU6R/d/VYD/ACCfBXsThG1BDp3ix3GQR7wSPes7dn6acViGvpEtMiWGYMGKjdDodNy34pkscOLXDtBWivhwyg8Ak2mTE2I4DoVx7dVbjbH5Vrwr5Yw8WtPa0LcFysM94oUnNcPR0rETqGgmZ6e5RwWNqPeG5gOMRvaXbxuiD0uCeF3plfwvOq+0/wBOmteH51X1x+lTWzC61PaH8rQqr8OHisIE5rTuPmmXV/KK+08Q0te0OBOV3NvHJOsae9Vdnn98ogD649wEnwWa2CLGukjlQLDiePXfoLirPk1TnGtPAOP4XfNb2k2TfL34WVgLK4NiIiAiIgIiICIiAiIgIiICIiAiIgL5vkitUEaPd8Svo5XgtpU8uJqdLiVZUrODuxzdx86PxOHwV6lim5Wy4AloNyBqAd/WqOC1PW7vM+KeYc+i1odBbl10loy+/wDtu1GtrUlWtpvHmKkEHkO0PQVZLxxXLdhMtB4cAXZKlxcwQY5REq6lkkJWvZjopMHAR2W8Fca8LkYZ5DCQAQ11WZJHNqP0sdwWzC4xzzAY0RxdPCRZuokdqurTc3BKu4Q8/wBd3gFChzqvrj9OmoYTR3rv/MVWexxFWHEHMYy7z5tkaX7FbM2qltQ2A+8z87VnyRpk4smbNa49uUD4lUG0SGjM3lFwJ3uAF4Lt4kfBdzyNoxVqu+60dp/9Uu0wj1oWVgLK5NCIiAiIgIiICIiAiIgIiICIiAiIgLxvlBRjEOI3we4L2S5209ltqkOmHARO49BQeXolWKQAsOk9pnxVmrstzdW+8XC1fsxCmWUarMwLeII7RCMbAA4BS827goFjuBQa6NENBGoLnu9z3F0d6nRotbzWgT2lMjuBUm03cFrNGKbA23EuP8xJ8VDKBMbzJ64A8At4oO4KQwhOvdcplXOrLt+SdKBUO8uA7B/dQpbIc7dlHF2vYu1gcG2k3K3rJOpPEoLAWVgLKiiIiAiIgIiICIiAiIgIiICIiAiIgIiICg+k06tB6wpogrnBM+z2EqJwDOntVpFMCoNns6e35Kf7Ezge0qwio0DCM+z2yfitraYGgA6lJEGIWURAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH/2Q=="
+                    alt="Copo Meditor">
+                <h2> Copo Medidor </h2>
+                <p>
+                    Precisamos de um copo Medidor como untensílio essencial.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Prato de sobremesa">
+                <h2> Prato de sobremesa </h2>
+                <p>
+                    Precisamos de um prato de sobremessa como untensílio essencial.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="referencias">
+        <h1> Referência </h1>
+        <button type="button">
+            <a target="_blank" href="https://www.tudogostoso.com.br/receita/21560-bolo-de-fuba-simples.html"> Site
+                oficial </a>
+        </button>
+        </div>
 </body>
+
 </html>
